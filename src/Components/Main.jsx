@@ -140,7 +140,9 @@ const handleDelete=async(id,color)=>{
   return (
     <>
       <DragDropContext onDragEnd={onDragEnd}>
-        <Center>
+        <Center  className="center"
+        // boxShadow={"rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset"} 
+>
           <Flex gap="6" my="10" className="maindiv">
             <Droppable droppableId="reddata">
               {(provided) => (
@@ -149,7 +151,7 @@ const handleDelete=async(id,color)=>{
                 className="red"
                   w="12em"
                   h="95vh"
-                  bgColor="red.400"
+              
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
@@ -207,7 +209,7 @@ const handleDelete=async(id,color)=>{
                 className="green"
                   w="12em"
                   h="95vh"
-                  bgColor="green.300"
+              
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                   
@@ -266,7 +268,7 @@ const handleDelete=async(id,color)=>{
                 className="yellow"
                   w="12em"
                   h="95vh"
-                  bgColor="yellow.300"
+              
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
@@ -325,7 +327,7 @@ const handleDelete=async(id,color)=>{
                 className="gray"
                   w="12em"
                   h="95vh"
-                  bgColor="gray.300"
+                
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
