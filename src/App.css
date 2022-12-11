@@ -36,3 +36,28 @@
     transform: rotate(360deg);
   }
 }
+
+.green > div > p{
+   background-color:green ;
+}
+  
+.red > div > p{
+  background-color:red ;
+}
+ 
+
+.gray > div > p{
+  background-color:gray;
+}
+ 
+
+.yellow > div > p{
+  background-color:yellow ;
+}
+ 
+.maindiv>div{
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.map{
+  border-radius: 2px solid white !important;
+}
