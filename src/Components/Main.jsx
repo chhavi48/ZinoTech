@@ -141,7 +141,7 @@ const handleDelete=async(id,color)=>{
     <>
       <DragDropContext onDragEnd={onDragEnd}>
         <Center  className="center"
-        // boxShadow={"rgba(0, 0, 0, 0.2) 0px 12px 28px 0px, rgba(0, 0, 0, 0.1) 0px 2px 4px 0px, rgba(255, 255, 255, 0.05) 0px 0px 0px 1px inset"} 
+
 >
           <Flex gap="6" my="10" className="maindiv">
             <Droppable droppableId="reddata">
@@ -404,9 +404,9 @@ const handleDelete=async(id,color)=>{
               </ModalBody>
 
               <ModalFooter>
-                <Button colorScheme="blue" mr={3} onClick={onClose}>
+               <Button colorScheme="blue" mr={3} onClick={onClose}>
                   Close
-                </Button>
+               </Button>
               </ModalFooter>
             </ModalContent>
           </Modal>
