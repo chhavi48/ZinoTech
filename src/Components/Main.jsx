@@ -22,6 +22,7 @@ import axios from "axios";
 import { Droppable } from "react-beautiful-dnd";
 import { Draggable } from "react-beautiful-dnd";
 import { DragDropContext } from "react-beautiful-dnd";
+import { DeleteIcon } from "@chakra-ui/icons";
 const Main = () => {
 
   const [red, setred] = useState([]);
@@ -186,7 +187,7 @@ const handleDelete=async(id,color)=>{
                             <Flex justifyContent={'space-around'} >
                               {i.name}
                             <Button bg='none' p='0' _hover={'none'} 
-                             onClick={()=>handleDelete(i.id,i.color)}>X</Button>
+                             onClick={()=>handleDelete(i.id,i.color)}><DeleteIcon/></Button>
                               </Flex>
                             </Text>
                           )}
@@ -242,7 +243,7 @@ const handleDelete=async(id,color)=>{
                               border ={"3px solid gray"}>
                           <Flex justifyContent={'space-around'}>
                               {i.name}
-                            <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}>X</Button>
+                            <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}><DeleteIcon/></Button>
                               </Flex>
                             </Text>
                           )}
@@ -300,7 +301,7 @@ const handleDelete=async(id,color)=>{
                             >
                               <Flex justifyContent={'space-around'}>
                               {i.name}
-                            <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}>X</Button>
+                            <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}><DeleteIcon/></Button>
                               </Flex>
                           
                             </Text>
@@ -357,7 +358,7 @@ const handleDelete=async(id,color)=>{
                             >
                             <Flex justifyContent={'space-around'}>
                               {i.name}
-                            <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}>X</Button>
+                            <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}><DeleteIcon/></Button>
                               </Flex>
                             </Text>
                           )}
@@ -386,10 +387,10 @@ const handleDelete=async(id,color)=>{
                   <label>Color</label>
                   <Select onChange={(e) => setaddcolor(e.target.value)}>
                     <option value={""}>Choose color</option>
-                    <option value={"red"}>RED</option>
-                    <option value={"yellow"}>YELLOW</option>
-                    <option value={"green"}>GREEN</option>
-                    <option value={"gray"}>GRAY</option>
+                    <option value={"red"}>RED ZONE</option>
+                    <option value={"yellow"}>YELLOW ZONE</option>
+                    <option value={"green"}>GREEN ZONE</option>
+                    <option value={"gray"}>GRAY ZONE</option>
                   </Select>
                   <Button  colorScheme='blue'  mr={3}  mt='5' type="submit">
                     Add
