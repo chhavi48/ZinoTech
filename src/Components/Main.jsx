@@ -23,7 +23,7 @@ import { Droppable } from "react-beautiful-dnd";
 import { Draggable } from "react-beautiful-dnd";
 import { DragDropContext } from "react-beautiful-dnd";
 const Main = () => {
-  const [data,setdata]=useState([])
+
   const [red, setred] = useState([]);
   const [yellow, setyellow] = useState([]);
   const [green, setgreen] = useState([]);
@@ -140,22 +140,20 @@ const handleDelete=async(id,color)=>{
   return (
     <>
       <DragDropContext onDragEnd={onDragEnd}>
-        <Center  className="center"
-
->
+        <Center  className="center">
           <Flex gap="6" my="10" className="maindiv">
             <Droppable droppableId="reddata">
               {(provided) => (
                 <Box border={"4px solid black"}
                 borderRadius='20px'
                 className="red"
-                  w="12em"
+                  w="16em"
                   h="95vh"
               
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <Flex mx="4" gap="10" my="2">
+                  <Flex mx="4" gap="20" my="5">
                     <Heading fontWeight="hairline" fontSize="3xl">
                       Red
                     </Heading>
@@ -207,14 +205,14 @@ const handleDelete=async(id,color)=>{
                 border={"4px solid black"}
                 borderRadius='20px'
                 className="green"
-                  w="12em"
+                  w="16em"
                   h="95vh"
               
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                   
                 >
-                  <Flex mx="4" gap="10" my="2">
+                  <Flex mx="4" gap="20" my="6">
                     <Heading fontWeight="hairline" fontSize="3xl">
                       Green
                     </Heading>
@@ -238,12 +236,10 @@ const handleDelete=async(id,color)=>{
                               ref={provided.innerRef}
                                 bg={'none'}
                               rounded
-                            
                               mx="8"
                               index={index}
                               borderRadius="10px"
-                              border ={"3px solid gray"}
-                            >
+                              border ={"3px solid gray"}>
                           <Flex justifyContent={'space-around'}>
                               {i.name}
                             <Button bg='none' p='0' _hover={'none'}  onClick={()=>handleDelete(i.id,i.color)}>X</Button>
@@ -266,13 +262,13 @@ const handleDelete=async(id,color)=>{
                 border={"4px solid black"}
                 borderRadius='20px'
                 className="yellow"
-                  w="12em"
+                  w="16em"
                   h="95vh"
               
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <Flex mx="4" gap="10" my="2">
+                  <Flex mx="4" gap="20" my="6">
                     <Heading fontWeight="hairline" fontSize="3xl">
                       Yellow
                     </Heading>
@@ -320,18 +316,16 @@ const handleDelete=async(id,color)=>{
 
             <Droppable droppableId="graydata">
               {(provided) => (
-                
-                <Box
+              <Box
                 border={"4px solid black"}
                 borderRadius='20px'
                 className="gray"
-                  w="12em"
+                  w="16em"
                   h="95vh"
-                
                   ref={provided.innerRef}
                   {...provided.droppableProps}
                 >
-                  <Flex mx="4" gap="10" my="2">
+                  <Flex mx="4" gap="20" my="6">
                     <Heading fontWeight="hairline" fontSize="3xl">
                       gray
                     </Heading>
@@ -397,7 +391,7 @@ const handleDelete=async(id,color)=>{
                     <option value={"green"}>GREEN</option>
                     <option value={"gray"}>GRAY</option>
                   </Select>
-                  <Button variant="ghost" type="submit">
+                  <Button  colorScheme='blue'  mr={3}  mt='5' type="submit">
                     Add
                   </Button>
                 </form>
